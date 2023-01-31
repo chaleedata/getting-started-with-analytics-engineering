@@ -4,7 +4,7 @@ select user_id  ,
              when count(order_id) = 2  then 'Purchase_2'
               when count(order_id) >= 3  then 'MorePurchase_3'
               end as  purchase
-  from orders
+  from   {{ source('greenery' , 'orders') }}
   group by 1 
 )
 

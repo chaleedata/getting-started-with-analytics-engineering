@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: Users_count
+    description: Greenery users
+    columns:
+      - name: user_value
+        description: User ID
+        tests:
+          - not_null
